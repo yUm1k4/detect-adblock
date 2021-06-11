@@ -66,8 +66,12 @@
             detect.classList.add(item);
         }
         let getProperty = window.getComputedStyle(detect).getPropertyValue("display");
+        console.log(getProperty);
         if (!wrapper.classList.contains("show")) {
             getProperty == "none" ? wrapper.classList.add("show") : wrapper.classList.remove("show");
+        }
+        if (getProperty != "none") {
+            alert('tidak ada AdbBlocker ^_^')
         }
         button.addEventListener("click", () => {
             wrapper.classList.remove("show");
